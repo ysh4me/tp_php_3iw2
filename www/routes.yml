@@ -1,0 +1,15 @@
+/:
+  controller: MainController
+  action: home
+
+/login:
+  controller: UserController
+  action: login
+
+/register:
+  controller: UserController
+  action: register
+
+/logout:
+  controller: UserController
+  action: logout

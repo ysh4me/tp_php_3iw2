@@ -3,16 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire d'inscription</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="/Public/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/css/intlTelInput.min.css">
     <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/intlTelInput.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/">Accueil</a></li>
+            <li><a href="/login">Connexion</a></li>
+            <li><a href="/register">Inscription</a></li>
+        </ul>
+    </nav>
+    <hr>
     <div class="form-container">
-        <h2>Formulaire d'inscription</h2>
-        <form action="login.php" method="POST">
+        <h2>Inscription</h2>
+        <form action="/register" method="POST">
             <label for="firstname">Prénom :</label>
             <input type="text" id="firstname" name="firstname" required>
 
@@ -22,7 +30,7 @@
             <label for="email">Email :</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="phone">Numéro de téléphone:</label>
+            <label for="phone">Numéro de téléphone :</label>
             <input type="tel" id="phone" name="phone" placeholder="Entrez votre numéro" required>
 
             <label for="civility">Civilité :</label>
@@ -43,6 +51,6 @@
     const iti = intlTelInput(input, {
         utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.8/build/js/utils.js"
     });
-</script>
+    </script>
 </body>
 </html>
